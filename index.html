@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <label for="inputText">Wpisz "KULKA":</label>
+        <label for="inputText">Aby przejść dalej, musimy upewnić się, że jesteś osobą ktorej dedykowana jest ta strona. Wpisz swoje imie by kontynuować:":</label>
         <input type="text" id="inputText" placeholder="Wpisz tutaj">
-        <button onclick="checkInput()">Sprawdź</button>
+        <button onclick="checkInput()">Dalej</button>
         <p id="message"></p>
     </div>
 
@@ -18,12 +18,12 @@
         function checkInput() {
             var userInput = document.getElementById('inputText').value.toLowerCase();
 
-            if (userInput === 'kulka') {
+            if (userInput === 'maja lisowska') {
                 // Przeniesienie do następnej sceny (możesz dostosować URL do własnych potrzeb)
                 window.location.href = 'nastepna_scena.html';
             } else {
                 // Wyświetlenie komunikatu o błędzie
-                document.getElementById('message').innerText = 'Błąd: Wprowadzone słowo jest niepoprawne.';
+                document.getElementById('message').innerText = 'Spadaj! tu trzeba wpisać imie najlepszej dziewczyny na świecie';
             }
         }
     </script>
