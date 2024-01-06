@@ -36,6 +36,11 @@
             margin-top: 20px;
             font-size: 18px;
         }
+
+        #errorMessage {
+            color: darkred;
+            margin-top: 10px;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <title>Interactive Page</title>
@@ -70,7 +75,9 @@
                 document.getElementById('textAboveGif').innerText = 'Kocham Cie kochanie, jesteś najlepsza, niezastąpiona i przede wszystkim moja! <3';
             } else {
                 // Wyświetlenie komunikatu o błędzie
-                document.getElementById('message').innerText = 'Spadaj! Tu trzeba wpisać imię najlepszej dziewczyny na świecie';
+                var errorMessage = document.getElementById('message');
+                errorMessage.innerText = 'Spadaj! Tu trzeba wpisać imię najlepszej dziewczyny na świecie';
+                errorMessage.style.color = 'darkred';
             }
         }
     </script>
