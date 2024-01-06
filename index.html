@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <label for="inputText">Aby przejść dalej, musimy upewnić się, że jesteś osobą ktorej dedykowana jest ta strona. Wpisz swoje imie by kontynuować. (Imie Nazwisko)":</label>
+        <label for="inputText">Aby przejść dalej, musimy upewnić się, że jesteś osobą, której dedykowana jest ta strona. Wpisz swoje imię i nazwisko, aby kontynuować. (Imię Nazwisko):</label>
         <input type="text" id="inputText" placeholder="Wpisz tutaj">
         <button onclick="checkInput()">Dalej</button>
         <p id="message"></p>
@@ -19,11 +19,11 @@
             var userInput = document.getElementById('inputText').value.toLowerCase();
 
             if (userInput === 'maja lisowska') {
-                // Przeniesienie do następnej sceny (możesz dostosować URL do własnych potrzeb)
-                window.location.href = 'nastepna_scena.html';
+                // Wyczyszczenie strony i wyświetlenie napisu "tartak"
+                document.body.innerHTML = '<div style="text-align: center; padding-top: 100px;"><h1>tartak</h1></div>';
             } else {
                 // Wyświetlenie komunikatu o błędzie
-                document.getElementById('message').innerText = 'Spadaj! tu trzeba wpisać imie najlepszej dziewczyny na świecie';
+                document.getElementById('message').innerText = 'Spadaj! Tu trzeba wpisać imię najlepszej dziewczyny na świecie';
             }
         }
     </script>
