@@ -27,6 +27,15 @@
         h1 {
             font-size: 24px;
         }
+
+        #gifContainer {
+            display: none;
+        }
+
+        #textAboveGif {
+            margin-top: 20px;
+            font-size: 18px;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <title>Interactive Page</title>
@@ -34,10 +43,15 @@
 <body>
     <div class="container">
         <h1>Aby przejść dalej, musimy upewnić się, że jesteś osobą, której dedykowana jest ta strona.</h1>
-        <label for="inputText">Wpisz swoje imię i nazwisko, aby kontynuować.:</label>
+        <label for="inputText">Wpisz swoje imię i nazwisko, aby kontynuować:</label>
         <input type="text" id="inputText" placeholder="Wpisz tutaj">
         <button onclick="checkInput()">Dalej</button>
         <p id="message"></p>
+    </div>
+
+    <div class="container" id="gifContainer">
+        <p id="textAboveGif"></p>
+        <img src="nazwa_pliku.gif" alt="GIF" width="300">
     </div>
 
     <script>
@@ -45,8 +59,15 @@
             var userInput = document.getElementById('inputText').value.toLowerCase();
 
             if (userInput === 'maja lisowska') {
-                // Wyczyszczenie strony i wyświetlenie napisu "tartak"
-                document.body.innerHTML = '<div style="text-align: center; padding-top: 100px;"><h1>Kocham cie slicznotko, jestes najlepsza niezastapiona i przede wszystkim moja! <3</h1></div>';
+                // Ukrycie kontenera z tekstem
+                document.querySelector('.container').style.display = 'none';
+
+                // Wyświetlenie kontenera z GIFem i tekstem
+                var gifContainer = document.getElementById('gifContainer');
+                gifContainer.style.display = 'block';
+
+                // Ustawienie tekstu nad GIFem
+                document.getElementById('textAboveGif').innerText = 'Kocham Cie kochanie, jesteś najlepsza, niezastąpiona i przede wszystkim moja! <3';
             } else {
                 // Wyświetlenie komunikatu o błędzie
                 document.getElementById('message').innerText = 'Spadaj! Tu trzeba wpisać imię najlepszej dziewczyny na świecie';
