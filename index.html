@@ -18,13 +18,23 @@
             width: 100%;
             padding: 20px;
         }
+
+        #inputText, button {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <title>Interactive Page</title>
 </head>
 <body>
     <div class="container">
-        <label for="inputText">Aby przejść dalej, musimy upewnić się, że jesteś osobą, której dedykowana jest ta strona. Wpisz swoje imię i nazwisko, aby kontynuować. (Imię Nazwisko):</label>
+        <h1>Aby przejść dalej, musimy upewnić się, że jesteś osobą, której dedykowana jest ta strona.</h1>
+        <label for="inputText">Wpisz swoje imię i nazwisko, aby kontynuować. (Imię Nazwisko):</label>
         <input type="text" id="inputText" placeholder="Wpisz tutaj">
         <button onclick="checkInput()">Dalej</button>
         <p id="message"></p>
