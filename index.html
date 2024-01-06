@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Your Website</title>
+    <title>Interactive Page</title>
 </head>
 <body>
-    <header>
-        <h1>Your Website</h1>
-    </header>
+    <div class="container">
+        <label for="inputText">Wpisz "KULKA":</label>
+        <input type="text" id="inputText" placeholder="Wpisz tutaj">
+        <button onclick="checkInput()">Sprawdź</button>
+        <p id="message"></p>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <script>
+        function checkInput() {
+            var userInput = document.getElementById('inputText').value.toLowerCase();
 
-    <section>
-        <h2>Welcome to Your Website!</h2>
-        <p>This is a simple website created using HTML and CSS.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
+            if (userInput === 'kulka') {
+                // Przeniesienie do następnej sceny (możesz dostosować URL do własnych potrzeb)
+                window.location.href = 'nastepna_scena.html';
+            } else {
+                // Wyświetlenie komunikatu o błędzie
+                document.getElementById('message').innerText = 'Błąd: Wprowadzone słowo jest niepoprawne.';
+            }
+        }
+    </script>
 </body>
 </html>
