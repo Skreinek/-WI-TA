@@ -56,12 +56,12 @@
 
     <div class="container" id="gifContainer">
         <p id="textAboveGif"></p>
-        <img src="nazwa_pliku.gif" alt="GIF" width="300">
+        <img src="nazwa_pliku.gif" alt="GIF" width="300" referrerpolicy="no-referrer" loading="lazy">
     </div>
 
     <script>
         function checkInput() {
-            var userInput = document.getElementById('inputText').value.toLowerCase();
+            var userInput = document.getElementById('inputText').value.toLowerCase().trim();
 
             if (userInput === 'maja lisowska') {
                 // Ukrycie kontenera z tekstem
