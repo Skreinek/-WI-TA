@@ -27,16 +27,12 @@
         h1 {
             font-size: 24px;
         }
-
-        #videoContainer {
-            display: none;
-        }
     </style>
     <link rel="stylesheet" href="style.css">
     <title>Interactive Page</title>
 </head>
 <body>
-    <div class="container" id="textContainer">
+    <div class="container">
         <h1>Aby przejść dalej, musimy upewnić się, że jesteś osobą, której dedykowana jest ta strona.</h1>
         <label for="inputText">Wpisz swoje imię i nazwisko, aby kontynuować.:</label>
         <input type="text" id="inputText" placeholder="Wpisz tutaj">
@@ -44,23 +40,13 @@
         <p id="message"></p>
     </div>
 
-    <div class="container" id="videoContainer">
-        <video controls width="400">
-            <source src="nazwa_pliku.mp4" type="video/mp4">
-            Twoja przeglądarka nie obsługuje odtwarzacza wideo.
-        </video>
-    </div>
-
     <script>
         function checkInput() {
             var userInput = document.getElementById('inputText').value.toLowerCase();
 
             if (userInput === 'maja lisowska') {
-                // Ukrycie kontenera z tekstem
-                document.getElementById('textContainer').style.display = 'none';
-
-                // Wyświetlenie kontenera z wideo
-                document.getElementById('videoContainer').style.display = 'block';
+                // Wyczyszczenie strony i wyświetlenie napisu "tartak"
+                document.body.innerHTML = '<div style="text-align: center; padding-top: 100px;"><h1>Kocham cie slicznotko, jestes najlepsza niezastapiona i przede wszystkim moja! <3</h1></div>';
             } else {
                 // Wyświetlenie komunikatu o błędzie
                 document.getElementById('message').innerText = 'Spadaj! Tu trzeba wpisać imię najlepszej dziewczyny na świecie';
